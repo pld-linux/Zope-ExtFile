@@ -2,12 +2,12 @@
 Summary:	Product stores large files in an external file-repository
 Summary(pl):	Produkt umo¿liwiaj±cy obs³ugê du¿ych plików w zewnêtrznych repozytoriach
 Name:		Zope-%{zope_subname}
-Version:	1.4.2
-Release:	2
+Version:	1.4.4
+Release:	1
 License:	Distributable
 Group:		Development/Tools
 Source0:	http://zope.org/Members/shh/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tar.gz
-# Source0-md5:	4fdf93b56ee148c10ffcd69feddcf3c9
+# Source0-md5:	4e13441da832a904cb75ad367388ae8b
 URL:		http://zope.org/Members/shh/ExtFile/
 BuildRequires:	python
 %pyrequires_eq	python-modules
