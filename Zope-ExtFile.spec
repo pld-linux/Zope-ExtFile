@@ -9,6 +9,7 @@ Group:		Development/Tools
 Source0:	http://zope.org/Members/shh/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tar.gz
 # Source0-md5:	4fdf93b56ee148c10ffcd69feddcf3c9
 URL:		http://zope.org/Members/shh/ExtFile/
+BuildRequires:  python
 %pyrequires_eq	python-modules
 Requires:	python-Imaging
 Requires:	Zope
