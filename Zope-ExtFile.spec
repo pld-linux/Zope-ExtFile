@@ -3,13 +3,13 @@
 Summary:	Product stores large files in an external file-repository
 Summary(pl):	Produkt umo¿liwiaj±cy obs³uge du¿ych plików w zewnêtrznych repozytoriach
 Name:		Zope-%{zope_subname}
-Version:	1.1.3
+Version:	1.2.0
 Release:	1
 License:	Distributable
 Group:		Development/Tools
-Source0:	http://zope.org/Members/MacGregor/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tgz
-# Source0-md5:	c5963b22b83a9ee0bb3fe46e525f38c0
-URL:		http://zope.org/Members/MacGregor/ExtFile/
+Source0:	http://zope.org/Members/shh/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tar.gz
+# Source0-md5:	8aeec9b5893dd194fa08efbbd4d346ac
+URL:		http://zope.org/Members/shh/ExtFile/
 %pyrequires_eq	python-modules
 Requires:	ImageMagick
 Requires:	Zope
@@ -32,7 +32,7 @@ repozytoriach i wy¶wietlanie ich ikonek dla ró¿nych typów MIME.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af {icons,www,*.py,*.dtml,version.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -af {Extensions,dtml,icons,tests,www,*.py,version.txt,refresh.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
 %py_ocomp $RPM_BUILD_ROOT%{_datadir}/%{name}
@@ -58,5 +58,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.txt LICENSE.txt README.txt
+%doc CHANGES*.txt LICENSE.txt README.txt UPGRADE*.txt
 %{_datadir}/%{name}
