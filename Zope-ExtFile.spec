@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 %define		zope_subname	ExtFile
 Summary:	Product stores large files in an external file-repository
 Summary(pl):	Produkt umo¿liwiaj±cy obs³uge du¿ych plików w zewnêtrznych repozytoriach
