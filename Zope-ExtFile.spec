@@ -1,6 +1,6 @@
 %define		zope_subname	ExtFile
 Summary:	Product stores large files in an external file-repository
-Summary(pl):	Produkt umo¿liwiaj±cy obs³uge du¿ych plików w zewnêtrznych repozytoriach
+Summary(pl):	Produkt umo¿liwiaj±cy obs³ugê du¿ych plików w zewnêtrznych repozytoriach
 Name:		Zope-%{zope_subname}
 Version:	1.4.2
 Release:	1
