@@ -3,12 +3,12 @@
 Summary:	Product stores large files in an external file-repository
 Summary(pl):	Produkt umo¿liwiaj±cy obs³uge du¿ych plików w zewnêtrznych repozytoriach
 Name:		Zope-%{zope_subname}
-Version:	1.4.0
+Version:	1.4.2
 Release:	1
 License:	Distributable
 Group:		Development/Tools
 Source0:	http://zope.org/Members/shh/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tar.gz
-# Source0-md5:	a80e223b19368549b5b70e7dd7d1ad3b
+# Source0-md5:	4fdf93b56ee148c10ffcd69feddcf3c9
 URL:		http://zope.org/Members/shh/ExtFile/
 %pyrequires_eq	python-modules
 Requires:	python-Imaging
@@ -32,7 +32,7 @@ repozytoriach i wy¶wietlanie ich ikonek dla ró¿nych typów MIME.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af {Extensions,dtml,icons,tests,www,*.py,version.txt,refresh.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -af {Extensions,dtml,icons,tests,utilities,www,*.py,version.txt,refresh.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
 %py_ocomp $RPM_BUILD_ROOT%{_datadir}/%{name}
