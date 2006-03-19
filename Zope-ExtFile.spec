@@ -10,10 +10,11 @@ Source0:	http://zope.org/Members/shh/%{zope_subname}/%{version}/%{zope_subname}-
 # Source0-md5:	4e13441da832a904cb75ad367388ae8b
 URL:		http://zope.org/Members/shh/ExtFile/
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.268
 %pyrequires_eq	python-modules
-Requires:	python-Imaging
-Requires:	Zope
 Requires(post,postun):	/usr/sbin/installzopeproduct
+Requires:	Zope
+Requires:	python-Imaging
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,16 +45,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
 	/usr/sbin/installzopeproduct -d %{zope_subname}
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	%service -q zope restart
 fi
 
 %files
