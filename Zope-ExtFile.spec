@@ -1,6 +1,6 @@
 %define		zope_subname	ExtFile
 Summary:	Product stores large files in an external file-repository
-Summary(pl):	Produkt umo¿liwiaj±cy obs³ugê du¿ych plików w zewnêtrznych repozytoriach
+Summary(pl.UTF-8):   Produkt umoÅ¼liwiajÄ…cy obsÅ‚ugÄ™ duÅ¼ych plikÃ³w w zewnÄ™trznych repozytoriach
 Name:		Zope-%{zope_subname}
 Version:	1.4.4
 Release:	1
@@ -22,9 +22,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The ExtFile Product stores large files in an external file-repository
 and is able to display icons for different MIME-Types.
 
-%description -l pl
-Produkt ExtFile umo¿liwia obs³ugê du¿ych plików w zewnêtrznych
-repozytoriach i wy¶wietlanie ich ikonek dla ró¿nych typów MIME.
+%description -l pl.UTF-8
+Produkt ExtFile umoÅ¼liwia obsÅ‚ugÄ™ duÅ¼ych plikÃ³w w zewnÄ™trznych
+repozytoriach i wyÅ›wietlanie ich ikonek dla rÃ³Å¼nych typÃ³w MIME.
 
 %prep
 %setup -q -n %{zope_subname}
