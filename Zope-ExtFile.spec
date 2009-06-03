@@ -2,12 +2,12 @@
 Summary:	Product stores large files in an external file-repository
 Summary(pl.UTF-8):	Produkt umożliwiający obsługę dużych plików w zewnętrznych repozytoriach
 Name:		Zope-%{zope_subname}
-Version:	1.4.4
+Version:	2.0.2
 Release:	1
 License:	Distributable
 Group:		Development/Tools
 Source0:	http://zope.org/Members/shh/%{zope_subname}/%{version}/%{zope_subname}-%{version}.tar.gz
-# Source0-md5:	4e13441da832a904cb75ad367388ae8b
+# Source0-md5:	a127454ee375fa46a8c4f0aec09d5f84
 URL:		http://zope.org/Members/shh/ExtFile/
 BuildRequires:	python
 BuildRequires:	rpmbuild(macros) >= 1.268
@@ -33,7 +33,7 @@ repozytoriach i wyświetlanie ich ikonek dla różnych typów MIME.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/%{name}
 
-cp -af {Extensions,dtml,icons,tests,utilities,www,*.py,version.txt,refresh.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp -af {Extensions,tests,utilities,www,*.py,configure.zcml,extfile.ini,version.txt} $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %py_comp $RPM_BUILD_ROOT%{_datadir}/%{name}
 %py_ocomp $RPM_BUILD_ROOT%{_datadir}/%{name}
@@ -55,5 +55,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc doc-1.1/ CHANGES.txt README.txt UPGRADE.txt
+%doc doc-1.5/ CHANGES.txt README.txt
 %{_datadir}/%{name}
